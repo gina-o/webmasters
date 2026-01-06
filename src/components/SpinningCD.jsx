@@ -1,0 +1,67 @@
+import { useRef, useEffect } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
+
+export default function SpinningCD({ modelPath }) {
+  const group = useRef();
+  const { scene } = useGLTF(modelPath);
+
+  useEffect(() => {
+    if (!scene || !group.current) return;
+
+    group.current.clear();
+
+  
+    const model = scene.clone(true);
+
+    
+    const box = new THREE.Box3().setFromObject(model);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z);
+
+    model.position.sub(center);
+    model.scale.setScalar(2 / maxDim);
+
+    
+    model.traverse((child) => {
+      if (child.isMesh && child.material) {
+        const material = child.material;
+
+        
+        if (Array.isArray(material)) {
+          material.forEach(makeTransparent);
+        } else {
+          makeTransparent(material);
+        }
+
+       
+        child.renderOrder = 1;
+      }
+    });
+
+    group.current.add(model);
+  }, [scene, modelPath]);
+
+  useFrame(() => {
+    if (group.current) group.current.rotation.y += 0.01;
+  });
+
+  return <group ref={group} />;
+}
+
+
+function makeTransparent(material) {
+  material.transparent = true;
+  material.opacity = 0.6;        // 0.2-0.6 or none see whats better
+  material.depthWrite = false;    // glass
+  material.side = THREE.DoubleSide;
+
+
+  material.metalness = 0.8;
+  material.roughness = 0.2;
+
+  material.needsUpdate = true;
+}
+

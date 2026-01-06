@@ -1,81 +1,57 @@
-import React, { useRef, useEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Html, useTexture } from "@react-three/drei";
+import SpinningCD from "./SpinningCD";
 import * as THREE from "three";
 
-function SpinningCD() {
-  const cdRef = useRef();
-  const gltf = useGLTF("/vinyl.glb");
 
-  const { camera, size } = useThree(); // access camera
-
-  useEffect(() => {
-    if (!gltf || !gltf.scene) return;
-
-    const scene = gltf.scene;
-
-    // box
-    const bbox = new THREE.Box3().setFromObject(scene);
-    const sizeBBox = bbox.getSize(new THREE.Vector3());
-    const center = bbox.getCenter(new THREE.Vector3());
-    const maxDim = Math.max(sizeBBox.x, sizeBBox.y, sizeBBox.z);
-
-
-    scene.position.set(-center.x, -center.y, -center.z);
-
-    
-    const fov = camera.fov * (Math.PI / 180); 
-    const distance = maxDim / (2 * Math.tan(fov / 2));
-
-    const scaleFactor = distance / maxDim * 0.8; 
-    scene.scale.setScalar(scaleFactor);
-
-    
-    camera.position.z = distance * 1.2;
-
- 
-    camera.lookAt(0, 0, 0);
-  }, [gltf, camera, size]);
-
-  useFrame(() => {
-    if (cdRef.current) cdRef.current.rotation.y += 0.003;
-  });
-
-  if (!gltf || !gltf.scene) return null;
-
-  return (
-    <primitive
-      ref={cdRef}
-      object={gltf.scene}
-      onClick={() => {
-        const audio = new Audio("/houston-sample.mp3");
-        audio.play();
-        window.location.href = "/enter";
-      }}
-    />
-  );
+/* BACKGROUND: change images here */
+function Background() {
+  const texture = useTexture("/background.png");
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.needsUpdate = true;
+  return <primitive attach="background" object={texture} />;
 }
 
 export default function CDCanvas() {
   return (
-    <Canvas
-      className="fixed top-0 left-0 w-screen h-screen z-10"
-      camera={{ position: [0, 0, 10], fov: 35 }}
-      gl={{ alpha: true }}
-    >
-      <TransparentBackground />
-      <ambientLight intensity={1.5} />
-      <directionalLight position={[0, 5, 10]} intensity={1.2} />
-      <SpinningCD />
-      <OrbitControls enableZoom={false} enablePan={false} />
+<Canvas
+  camera={{ position: [0, 0, 4], fov: 55 }}
+  gl={{
+    toneMapping: THREE.NoToneMapping,
+    outputColorSpace: THREE.SRGBColorSpace,
+  }}
+  style={{ position: "absolute", inset: 0 }}
+>
+
+      
+      <Background />
+
+      
+      <ambientLight intensity={3} />
+      <directionalLight position={[5, 5, 5]} intensity={2.5} />
+      <directionalLight position={[-5, -5, 5]} intensity={1.5} />
+
+     
+      <Html fullscreen>
+        <div className="w-full h-full flex flex-col items-center justify-between py-24 pointer-events-none">
+          <h1 className="rubik-80s-fade-regular text-8xl md:text-7xl text-black text-center tracking-tight drop-shadow-xl">
+            The Sounds of Houston
+          </h1>
+
+          <p className="text-white/80 text-xl">
+            Click the CD to enter Houston vibes
+          </p>
+        </div>
+      </Html>
+
+      
+      <SpinningCD modelPath="/chicken.glb" />
+
+      <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
     </Canvas>
   );
 }
 
-function TransparentBackground() {
-  useThree(({ gl, scene }) => {
-    gl.setClearColor(0x000000, 0);
-    scene.background = null;
-  });
-  return null;
-}
+
+
+
