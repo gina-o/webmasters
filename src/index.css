@@ -1,44 +1,65 @@
+/* ====== FONTS + TAILWIND ====== */
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.rubik-80s-fade-regular {
-  font-family: "Rubik 80s Fade", system-ui;
-  font-weight: 400;
-  font-style: normal;
+
+/* ====== IMPORTANT: REMOVE VITE BACKGROUNDS ====== */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;   /* <-- CRITICAL */
+}
+/* Leaflet CSS */
+.leaflet-container {
+  height: 500px; /* adjust height as needed */
+  width: 100%;
 }
 
+/* ====== Neon Pulse Animation ====== */
+@keyframes neon-pulse {
+  0% {
+    text-shadow: 0 0 5px #fe77c2, 0 0 10px #fe77c2, 0 0 20px #fe77c2, 0 0 40px #fe77c2;
+    opacity: 0.8;
+  }
+  50% {
+    text-shadow: 0 0 10px #fe77c2, 0 0 20px #fe77c2, 0 0 40px #fe77c2, 0 0 80px #fe77c2;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 5px #fe77c2, 0 0 10px #fe77c2, 0 0 20px #fe77c2, 0 0 40px #fe77c2;
+    opacity: 0.8;
+  }
+}
+
+/* Utility class for neon pulse */
+.animate-neon-pulse {
+  animation: neon-pulse 2s infinite ease-in-out;
+  color: #fff; /* Base text color */
+}
+
+
+/* Remove Vite's :root background completely */
 :root {
-  font-family: system-ui, "Rubik 80s Fade", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
+  background: transparent !important;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ====== OPTIONAL GLOBAL FONT ====== */
+body {
+  font-family: system-ui, "Rubik 80s Fade", Helvetica, Arial, sans-serif;
+}
+
+/* ====== KEEP SOME BASIC STYLES ====== */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -46,6 +67,7 @@ h1 {
   line-height: 1.1;
 }
 
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -57,22 +79,17 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
+/* ====== LIGHT MODE FIX ====== */
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  html, body, #root {
+    background: transparent !important;
   }
-  a:hover {
-    color: #747bff;
-  }
+
   button {
     background-color: #f9f9f9;
   }
