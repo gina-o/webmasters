@@ -23,7 +23,27 @@ export default function Menu() {
       <div className="fixed bottom-24 right-12 w-96 h-96 bg-blue-400/10 rounded-3xl blur-3xl pointer-events-none z-0" />
       <div className="fixed top-1/3 right-1/4 w-80 h-80 bg-indigo-300/10 rounded-3xl blur-3xl pointer-events-none z-0" />
 
-      {/* 📜 Scrollable content */}
+      {/* scroll */}
+      <section className="relative h-screen">
+          <div className="fixed inset-0 bg-[url('/houmenu.png')] bg-cover bg-center" />
+
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+              <h1 className="font-sixtyfour animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">Welcome to the Sounds of Houston</h1>
+              <p className="text-lg leading-relaxed max-w-2xl mx-auto">
+                          This is a living, musical map of our city. Where history, culture,
+                          and community come together through sound.
+                        </p>
+
+               <button
+                           onClick={scrollToExplore}
+                           className="mt-8 bg-purple-600 hover:bg-purple-800 text-white py-3 px-8 rounded-xl transition duration-200 shadow-lg"
+                         >
+                           Begin Your Journey →
+                         </button>
+            </div>
+          </div>
+        </section>
       <div className="relative z-10 flex flex-col items-center py-40 px-6 lg:px-32 space-y-40">
         {/* 🌟 HERO */}
         <section className="max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
