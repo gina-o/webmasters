@@ -99,18 +99,23 @@ export default function Menu() {
                       </button>
                     </div>
 
-          {/* Card 4 */}
-          <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-            <h2 className="text-3xl font-bold mb-4">Check out the venues</h2>
-            <p>Explore the music, which shapes Houston.</p>
-                <button
-  onClick={() => navigate("/concert-updates")}
-  className="mt-4 bg-cyan-500 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition duration-200 shadow-md"
->
-  Watch the Waveform Timeline →
-</button>
-          </div>
-        </section>
+                    {/* Card 4 */}
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
+                      <h2 className="text-3xl font-bold mb-4">
+                        Check out the venues
+                      </h2>
+                      <p>Explore the music which shapes Houston.</p>
+                      <button
+                        onClick={() => navigate("/concert-updates")}
+                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        View venues →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
       </div>
     </div>
   );
