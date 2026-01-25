@@ -32,7 +32,7 @@ const neighborhoods = [
   {
     name: "Third Ward",
     description: "Historic jazz and blues scene.",
-    artists: ["Beyonce", "Sam \"Lightnin\" Hopkins", "Arnett Cobb", "Johnny \"Guitar\" Watson", "Albert Collins"],
+    artists: ["Milt Larkin: A Third Ward native whose band in the 1930s was a dominating force in the \"territory\". He advocated the \"Texas Tenor\" sound so that his saxophonists would be heard above the rest of the band.", "Arnett Cobb & Illinois Jacquet: They were both sax players of great repute from Jack Yates High School. These artists defined the \"Texas Tenor\" sound, which features honking low notes and squeaking high notes.", "Beyoncé: Raised in the Third Ward, her music frequently references local landmarks and the neighborhood's rich marching band tradition."],
     video: "4m1EFMoRFvY",
     coordinates: [
       [29.728, -95.354],
@@ -100,7 +100,7 @@ const HoustonMap = () => {
       </MapContainer>
 
       {selectedNeighborhood && (
-        <div className="mt-4 p-4 bg-white shadow-lg rounded-lg max-w-2xl mx-auto">
+        <div className="map-popup">
           <h2 className="text-xl font-semibold">{selectedNeighborhood.name}</h2>
           <p>{selectedNeighborhood.description}</p>
           <p className="mt-2 font-medium">Artists:</p>
@@ -113,7 +113,7 @@ const HoustonMap = () => {
           {/* Play/Stop Buttons */}
           {selectedNeighborhood.video && !playingVideo && (
             <button
-              className="mt-4 bg-pink-500 text-white px-4 py-2 rounded-lg"
+
               onClick={handlePlay}
             >
               ▶ Play Sample
@@ -121,7 +121,7 @@ const HoustonMap = () => {
           )}
           {selectedNeighborhood.video && playingVideo && (
             <button
-              className="mt-4 bg-gray-500 text-white px-4 py-2 rounded-lg"
+
               onClick={handleStop}
             >
               ■ Stop

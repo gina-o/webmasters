@@ -10,9 +10,9 @@ const timelineEvents = [
   },
   {
     id: 2,
-    year: 1920,
+    year: 1940,
     title: "Music Scene Emerges",
-    description: "Houston's music scene begins to develop with early jazz and blues.",
+    description: "The 1940s marked the beginning of Houston’s music era. After experimenting with recording technology, William Russel \“Bill\” Quinn founded Quinn Recording, which later became SugarHill Recording Studio, the oldest operating studio in the nation. Many other recording studios were created, such as Peacock Records and Freedom Records. Goree Carter, a singer, guitarist, drummer, and songwriter, released “Rock Awhile,” one of the first rock n’ roll recordings in the U.S. Blues were very popular during this period. Samuel John Hopkins, now known as Lightnin’ Hopkins, was discovered while singing in Houston’s Third Ward. In 1946, he traveled with Wilson Smith to Los Angeles, where they recorded 12 tracks.",
     image: "https://via.placeholder.com/400x200?text=Music+Scene",
   },
   {

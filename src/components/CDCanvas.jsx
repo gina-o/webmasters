@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 /* BACKGROUND: change images here */
 function Background() {
-  const texture = useTexture("/background.png");
+  const texture = useTexture("/homebackground.jpg");
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return <primitive attach="background" object={texture} />;
@@ -15,7 +15,7 @@ function Background() {
 export default function CDCanvas() {
   return (
 <Canvas
-  camera={{ position: [0, 0, 4], fov: 55 }}
+  camera={{ position: [5, 2, 2], fov: 55 }}
   gl={{
     toneMapping: THREE.NoToneMapping,
     outputColorSpace: THREE.SRGBColorSpace,
@@ -34,7 +34,7 @@ export default function CDCanvas() {
      
       <Html fullscreen>
         <div className="w-full h-full flex flex-col items-center justify-between py-24 pointer-events-none">
-          <h1 className="rubik-80s-fade-regular text-8xl md:text-7xl text-black text-center tracking-tight drop-shadow-xl">
+          <h1 className="title">
             The Sounds of Houston
           </h1>
 

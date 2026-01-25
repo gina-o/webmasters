@@ -16,7 +16,7 @@ export default function Menu() {
   return (
     <div className="relative w-screen min-h-screen overflow-y-auto text-white">
       {/* 🌊 Background */}
-      <div className="fixed inset-0 bg-gradient-to-b from-blue-900 via-indigo-900 to-black z-0" />
+      <div className="fixed inset-0 bg-[url('/houmenu.png')] bg-cover" />
 
       {/* 🔮 Glass bubbles */}
       <div className="fixed top-16 left-10 w-72 h-72 bg-cyan-300/10 rounded-3xl blur-3xl pointer-events-none z-0" />
