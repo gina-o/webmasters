@@ -84,25 +84,20 @@ export default function Menu() {
                       </button>
                     </div>
 
-          {/* Card 3 - See the Pulse */}
-          <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
-            <h2 className="text-3xl font-bold mb-4">See the Pulse</h2>
-            <p>
-              Watch the waveform timeline to see how historical moments and music move
-              together across decades.
-            </p>
-
-            {/* Button to navigate to timeline page */}
-            
-    <button
-  onClick={() => navigate("/timelinePage")}
-  className="mt-4 bg-cyan-500 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition duration-200 shadow-md"
->
-  Watch the Waveform Timeline →
-</button>
-
-
-          </div>
+                    {/* Card 3 */}
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
+                      <h2 className="text-3xl font-bold mb-4">See the Pulse</h2>
+                      <p className="text-center">
+                        Watch the waveform timeline to see how historical moments and
+                        music move together across decades.
+                      </p>
+                      <button
+                        onClick={() => navigate("/timelinePage")}
+                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Watch the Waveform Timeline →
+                      </button>
+                    </div>
 
           {/* Card 4 */}
           <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
