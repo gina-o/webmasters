@@ -160,7 +160,7 @@ body {
     opacity: 0.8;
   }
   50% {
-    text-shadow: 0 0 10px #d783b7, 0 0 20px #d783b7, 0 0 40px #d783b7, 0 0 80px #d783b7;
+    text-shadow: 0 0 10px #5E93C9, 0 0 20px #5E93C9, 0 0 40px #5E93C9, 0 0 80px #5E93C9;
     opacity: 1;
   }
   100% {
