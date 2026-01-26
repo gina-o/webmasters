@@ -44,11 +44,13 @@ export default function CDCanvas() {
           </div>
         </Html>
 
-      
-      <SpinningCD modelPath="/chicken.glb" />
+        <SpinningCD modelPath="/chicken.glb" />
+        <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
+      </Canvas>
 
-      <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
-    </Canvas>
+      {/* Play the background music when the page loads */}
+      <BackgroundMusic />
+    </>
   );
 }
 
