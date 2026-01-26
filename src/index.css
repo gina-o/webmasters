@@ -183,7 +183,8 @@ body {
 
 /* ====== OPTIONAL GLOBAL FONT ====== */
 body {
-  font-family: system-ui, "Workbench", Helvetica, Arial, sans-serif, "Rubik 80s Fade";
+  font-family:  "Be Vietnam Pro", "Rubik 80s Fade";
+  overflow-x: hidden;
 }
 
 /* ====== KEEP SOME BASIC STYLES ====== */
