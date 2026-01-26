@@ -231,3 +231,9 @@ button {
     background-color: #5E93C9; /* Light mode background */
   }
 }
+
+.content {
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(61 114 166 / 50%);
+}
