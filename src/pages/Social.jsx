@@ -166,6 +166,7 @@ const filteredPosts = posts
           </div>
         )}
       </div>
+      </section>
     </div>
     </div>
   );
