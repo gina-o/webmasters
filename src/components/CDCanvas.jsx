@@ -2,14 +2,21 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import SpinningCD from "./SpinningCD";
 import * as THREE from "three";
+import { useEffect } from "react";
 
-  <audio id="background-audio" autoplay loop>
-  <source src="citysounds.mp3" type="audio/mp3">
-  </source>
-  Your browser does not support the audio element.
-</audio>
+function BackgroundMusic() {
+  useEffect(() => {
+    const audio = document.getElementById("background-audio");
+    audio.play(); // Ensure it starts playing when the component mounts
+  }, []);
 
-
+  return (
+    <audio id="background-audio" autoPlay loop>
+      <source src="citysounds.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+  );
+}
 
 /* BACKGROUND: change images here */
 function Background() {
@@ -17,9 +24,7 @@ function Background() {
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return <primitive attach="background" object={texture} />;
-  
 }
-
 
 export default function CDCanvas() {
   return (
@@ -53,6 +58,7 @@ export default function CDCanvas() {
     </>
   );
 }
+
 
 
 
