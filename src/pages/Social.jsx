@@ -154,6 +154,7 @@ const filteredPosts = posts
         )}
       </div>
     </div>
+    </div>
   );
 };
 
