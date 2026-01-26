@@ -18,7 +18,7 @@ export default function Menu() {
       {/* background */}
       <div className="fixed inset-0 bg-[url('/houmenu.png')] bg-cover" />
 
-      {/* 🔮 Glass bubbles */}
+      {/* bubbles */}
       <div className="fixed top-16 left-10 w-72 h-72 bg-cyan-300/10 rounded-3xl blur-3xl pointer-events-none z-0" />
       <div className="fixed bottom-24 right-12 w-96 h-96 bg-blue-400/10 rounded-3xl blur-3xl pointer-events-none z-0" />
       <div className="fixed top-1/3 right-1/4 w-80 h-80 bg-indigo-300/10 rounded-3xl blur-3xl pointer-events-none z-0" />
