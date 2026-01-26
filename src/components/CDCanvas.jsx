@@ -23,22 +23,19 @@ function Background() {
 
 export default function CDCanvas() {
   return (
-<Canvas
-  camera={{ position: [5, 2, 2], fov: 55 }}
-  gl={{
-    toneMapping: THREE.NoToneMapping,
-    outputColorSpace: THREE.SRGBColorSpace,
-  }}
-  style={{ position: "absolute", inset: 0 }}
->
-
-      
-      <Background />
-
-      
-      <ambientLight intensity={3} />
-      <directionalLight position={[5, 5, 5]} intensity={2.5} />
-      <directionalLight position={[-5, -5, 5]} intensity={1.5} />
+    <>
+      <Canvas
+        camera={{ position: [5, 2, 2], fov: 55 }}
+        gl={{
+          toneMapping: THREE.NoToneMapping,
+          outputColorSpace: THREE.SRGBColorSpace,
+        }}
+        style={{ position: "absolute", inset: 0 }}
+      >
+        <Background />
+        <ambientLight intensity={3} />
+        <directionalLight position={[5, 5, 5]} intensity={2.5} />
+        <directionalLight position={[-5, -5, 5]} intensity={1.5} />
 
      
       <Html fullscreen>
