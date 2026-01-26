@@ -10,7 +10,7 @@ export default function Menu() {
   };
 
   const goToTimeline = () => {
-    navigate("/timeline"); // <-- Replace with your timeline page route
+    navigate("/timeline");
   };
 
   return (
