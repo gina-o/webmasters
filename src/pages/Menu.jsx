@@ -70,19 +70,17 @@ export default function Menu() {
                       </button>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-                      <h2 className="text-3xl font-bold mb-4">
-                        See what others are talking about
-                      </h2>
-                      <p>Experience the sounds of Houston together</p>
-                      <button
-                        onClick={() => navigate("/social")}
-                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
-                      >
-                        Go to Blog
-                      </button>
-                    </div>
+          {/* Card 2 */}
+          <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
+            <h2 className="text-3xl font-bold mb-4">See what others are talking about</h2>
+            <p>Experience the sounds of Houston together</p>
+                <button
+  onClick={() => navigate("/social")}
+  className="mt-4 bg-cyan-500 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition duration-200 shadow-md"
+>
+  Go to Blog 
+</button>
+          </div>
 
                     {/* Card 3 */}
                     <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">

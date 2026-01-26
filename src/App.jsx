@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Menu from "./pages/Menu.jsx";
-import TimelinePage from "./pages/TimelinePage.jsx"; // ✅ import the correct component
+import TimelinePage from "./pages/TimelinePage.jsx"; 
 import Social from "./pages/Social.jsx";
 import Map from "./pages/Map.jsx";
 import ConcertUpdates from "./pages/ConcertUpdates.jsx";
+import Resilience from "./pages/Resilience.jsx";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/social" element={<Social />} />
       <Route path="/map" element={<Map />} />
       <Route path="/concert-updates" element={<ConcertUpdates />} />
+      <Route path="/resilience" element={<Resilience />} />
     </Routes>
   );
 }

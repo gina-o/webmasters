@@ -6,7 +6,7 @@ import * as THREE from "three";
 
 /* BACKGROUND: change images here */
 function Background() {
-  const texture = useTexture("/homebackground.jpg");
+  const texture = useTexture("/bruno.png");
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return <primitive attach="background" object={texture} />;
