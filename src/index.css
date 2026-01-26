@@ -49,6 +49,7 @@ html, body, #root {
 /* ====== OPTIONAL GLOBAL FONT ====== */
 body {
   font-family: "Be Vietnam Pro", "Workbench";
+  overflow-x: hidden;
 }
 
 /* ====== KEEP SOME BASIC STYLES ====== */
