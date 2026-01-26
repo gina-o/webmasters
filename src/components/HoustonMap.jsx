@@ -46,7 +46,7 @@ const neighborhoods = [
 // Custom pink star icon
 const starIcon = new L.Icon({
   iconUrl:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF69B4'%3E%3Cpath d='M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.172L12 18.897l-7.335 3.86 1.4-8.172L.13 9.211l8.2-1.193z'/%3E%3C/svg%3E",
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%235E93C9'%3E%3Cpath d='M12 .587l3.668 7.431 8.2 1.193-5.934 5.783 1.401 8.172L12 18.897l-7.335 3.86 1.4-8.172L.13 9.211l8.2-1.193z'/%3E%3C/svg%3E",
   iconSize: [30, 30],
   iconAnchor: [15, 30],
   popupAnchor: [0, -30],
@@ -113,7 +113,7 @@ const HoustonMap = () => {
           {/* Play/Stop Buttons */}
           {selectedNeighborhood.video && !playingVideo && (
             <button
-
+              className="play-pause"
               onClick={handlePlay}
             >
               ▶ Play Sample
@@ -121,7 +121,7 @@ const HoustonMap = () => {
           )}
           {selectedNeighborhood.video && playingVideo && (
             <button
-
+                className="play-pause"
               onClick={handleStop}
             >
               ■ Stop

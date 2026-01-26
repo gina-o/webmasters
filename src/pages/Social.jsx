@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { auth, db, googleProvider } from "../firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { collection, collectionGroup, query, orderBy, onSnapshot } from "firebase/firestore";
@@ -6,11 +6,15 @@ import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 
 const Social = () => {
+    const socialRef = useRef(null);
   const [user, setUser] = useState(null);
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
   const [authChecked, setAuthChecked] = useState(false);
   const [searchTerm, setSearchTerm] = useState(""); 
+    const scroll = () => {
+        socialRef.current?.scrollIntoView({ behavior: "smooth" });
+      };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
