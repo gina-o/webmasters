@@ -42,21 +42,12 @@ export default function CDCanvas() {
 
      
       <Html fullscreen>
-<<<<<<< HEAD
         <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center justify-between py-24 pointer-events-none">
           <h1 className="title">
-=======
-        <div className="w-full h-full flex flex-col items-center  py-24 pointer-events-none">
-          <h1 className="animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">
->>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc
             The Sounds of Houston
           </h1>
           <p className="text-white/80 text-xl">
-<<<<<<< HEAD
             Let's listen ▶︎
-=======
-            Click the CD to enter Houston vibes...
->>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc
           </p>
         </div>
       </Html>
