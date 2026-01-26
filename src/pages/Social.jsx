@@ -122,7 +122,7 @@ const filteredPosts = posts
         </section>
       <div className="content">
           <section ref={socialRef} className="relative min-h-screen flex items-start justify-center pt-40">
-      <div className="max-w-9/10 w-full mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-blue-400">
+      <div className="w-[90%] mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-blue-400">
 
 
         {user ? (
