@@ -37,17 +37,12 @@ export default function CDCanvas() {
         <directionalLight position={[5, 5, 5]} intensity={2.5} />
         <directionalLight position={[-5, -5, 5]} intensity={1.5} />
 
-     
-      <Html fullscreen>
-        <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center py-24 pointer-events-none">
-          <h1 className="title">
-            The Sounds of Houston
-          </h1>
-          <p className="text-white/80 text-xl">
-            Click the CD to enter ▶︎
-          </p>
-        </div>
-      </Html>
+        <Html fullscreen>
+          <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center justify-between py-24 pointer-events-none">
+            <h1 className="title">The Sounds of Houston</h1>
+            <p className="text-white/80 text-xl">Let's listen ▶︎</p>
+          </div>
+        </Html>
 
       
       <SpinningCD modelPath="/chicken.glb" />
