@@ -3,6 +3,13 @@ import { OrbitControls, Html, useTexture } from "@react-three/drei";
 import SpinningCD from "./SpinningCD";
 import * as THREE from "three";
 
+  <audio id="background-audio" autoplay loop>
+  <source src="citysounds.mp3" type="audio/mp3">
+  </source>
+  Your browser does not support the audio element.
+</audio>
+
+
 
 /* BACKGROUND: change images here */
 function Background() {
@@ -10,7 +17,9 @@ function Background() {
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return <primitive attach="background" object={texture} />;
+  
 }
+
 
 export default function CDCanvas() {
   return (
@@ -33,13 +42,13 @@ export default function CDCanvas() {
 
      
       <Html fullscreen>
-        <div className="w-full h-full flex flex-col items-center justify-between py-24 pointer-events-none">
+        <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center justify-between py-24 pointer-events-none">
           <h1 className="title">
             The Sounds of Houston
           </h1>
 
           <p className="text-white/80 text-xl">
-            Click the CD to enter Houston vibes
+            Let's listen ▶︎
           </p>
         </div>
       </Html>

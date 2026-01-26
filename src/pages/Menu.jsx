@@ -29,7 +29,7 @@ export default function Menu() {
 
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
-              <h1 className="font-sixtyfour animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">Welcome to the Sounds of Houston</h1>
+              <h1 className="font-sixtyfour animate-neon-pulse text-4xl mb-4 text-white font-rubik-80s">Welcome to the Sounds of Houston</h1>
               <p className="text-lg leading-relaxed max-w-2xl mx-auto">
                           This is a living, musical map of our city. Where history, culture,
                           and community come together through sound.
@@ -37,7 +37,7 @@ export default function Menu() {
 
                <button
                            onClick={scrollToExplore}
-                           className="mt-8 bg-purple-600 hover:bg-purple-800 text-white py-3 px-8 rounded-xl transition duration-200 shadow-lg"
+                           className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg shadow-md"
                          >
                            Begin Your Journey →
                          </button>
@@ -57,14 +57,14 @@ export default function Menu() {
 
                   <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Card 1 */}
-                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-                      <h2 className="text-3xl font-bold mb-4">
+                    <div className="bg-white/10  backdrop-blur-md p-10 rounded-xl border border-white/20">
+                      <h2 className="text-3xl font-rubik-80s mb-4">
                         Explore Neighborhoods
                       </h2>
-                      <p>Click through Houston’s communities...</p>
+                      <p>See the sound that fills the coves.</p>
                       <button
                         onClick={() => navigate("/map")}
-                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
                       >
                         Check out map
                       </button>
@@ -72,11 +72,11 @@ export default function Menu() {
 
           {/* Card 2 */}
           <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-            <h2 className="text-3xl font-bold mb-4">See what others are talking about</h2>
-            <p>Experience the sounds of Houston together</p>
+            <h2 className="text-3xl font-rubik-80s mb-4">See what others are talking about</h2>
+            <p>Experience the sounds of Houston together.</p>
                 <button
-  onClick={() => navigate("/social")}
-  className="mt-4 bg-cyan-500 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition duration-200 shadow-md"
+  onClick={() => navigate("/resilience")}
+  className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition duration-200 shadow-md"
 >
   Go to Blog 
 </button>
@@ -84,31 +84,63 @@ export default function Menu() {
 
                     {/* Card 3 */}
                     <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
-                      <h2 className="text-3xl font-bold mb-4">See the Pulse</h2>
+                      <h2 className="text-3xl font-rubik-80s mb-4">How time flows by</h2>
                       <p className="text-center">
-                        Watch the waveform timeline to see how historical moments and
+                        Watch the timeline to see how historical moments and
                         music move together across decades.
                       </p>
                       <button
                         onClick={() => navigate("/timelinePage")}
-                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
                       >
-                        Watch the Waveform Timeline →
+                        Timeline →
                       </button>
                     </div>
 
                     {/* Card 4 */}
                     <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-                      <h2 className="text-3xl font-bold mb-4">
+                      <h2 className="text-3xl font-rubik-80s mb-4">
                         Check out the venues
                       </h2>
                       <p>Explore the music which shapes Houston.</p>
                       <button
                         onClick={() => navigate("/concert-updates")}
-                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
                       >
                         View venues →
                       </button>
+                      
+                    </div>
+                    
+                    {/* Card 5 */}
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
+                      <h2 className="text-3xl font-rubik-80s mb-4">
+                        Get involved
+                      </h2>
+                      <p>Help shape the future of Houston's music scene.</p>
+                      <button
+                        onClick={() => navigate("/volunteer")}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Volunteer →
+                      </button>
+                      </div>
+                    {/* Card 6 */}
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
+                      <h2 className="text-3xl font-rubik-80s mb-4">
+                        Any Recommendations?
+                      </h2>
+                      <p>Let us know!</p>
+                      <button
+                        onClick={() => navigate("/resource-form")}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Fill form →
+                      </button>
+
+                      
+                    
+                      
                     </div>
                   </div>
                 </div>

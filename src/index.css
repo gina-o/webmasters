@@ -1,4 +1,5 @@
 /* ====== FONTS + TAILWIND ====== */
+/* index.css or global.css */
 @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
 /* Tailwind import directives */
 /* index.css */
@@ -22,6 +23,137 @@ html, body, #root {
 }
 
 /* ====== Neon Pulse Animation ====== */
+/* ====== Lilac Neon Pulse Animation ====== */
+
+@keyframes lilac {
+  0% {
+    text-shadow: 0 0 5px #ada7ff, 0 0 10px #ada7ff, 0 0 20px #ada7ff, 0 0 40px #ada7ff;
+    opacity: 0.8;
+  }
+  50% {
+    text-shadow: 0 0 10px #ada7ff, 0 0 20px #ada7ff, 0 0 40px #ada7ff, 0 0 80px #ada7ff;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 5px #ada7ff, 0 0 10px #ada7ff, 0 0 20px #ada7ff, 0 0 40px #ada7ff;
+    opacity: 0.8;
+  }
+}
+
+/* Apply the lilac neon effect */
+.animate-lilac {
+  animation: lilac 2s infinite ease-in-out; /* Reference to the 'lilac' animation */
+  color: #071e2f; /* Default text color */
+}
+
+/* Global Styles for Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Glass Bubble Effect */
+.volunteer-hub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.4); /* White background with transparency */
+  border-radius: 20px;
+  backdrop-filter: blur(10px); /* Blur the background for a glass effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.volunteer-hub h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Nonprofit Cards */
+.nonprofits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.nonprofit-card {
+  background: rgba(255, 255, 255, 0.6); /* Light background with some transparency */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  backdrop-filter: blur(8px); /* Apply blur to background */
+  transition: all 0.3s ease-in-out;
+}
+
+.nonprofit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover effect */
+}
+
+/* Text Styling */
+.nonprofit-card h2 {
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.nonprofit-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.nonprofit-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nonprofit-card a:hover {
+  text-decoration: underline;
+}
+
+/* Volunteer Opportunity Cards */
+.opportunity-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.opportunity-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.opportunity-card a {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.opportunity-card a:hover {
+  text-decoration: underline;
+}
+
+
+
 @keyframes neon-pulse {
   0% {
     text-shadow: 0 0 5px #fe77c2, 0 0 10px #fe77c2, 0 0 20px #fe77c2, 0 0 40px #fe77c2;
@@ -51,7 +183,7 @@ html, body, #root {
 
 /* ====== OPTIONAL GLOBAL FONT ====== */
 body {
-  font-family: system-ui, "Workbench", Helvetica, Arial, sans-serif;
+  font-family: system-ui, "Workbench", Helvetica, Arial, sans-serif, "Rubik 80s Fade";
 }
 
 /* ====== KEEP SOME BASIC STYLES ====== */

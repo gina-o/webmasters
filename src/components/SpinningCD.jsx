@@ -58,7 +58,7 @@ export default function SpinningCD({ modelPath }) {
 
 function makeTransparent(material) {
   material.transparent = true;
-  material.opacity = 0.6;
+ 
   material.depthWrite = false;
   material.side = THREE.DoubleSide;
   material.metalness = 0.8;
