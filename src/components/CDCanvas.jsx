@@ -33,8 +33,8 @@ export default function CDCanvas() {
 
      
       <Html fullscreen>
-        <div className="w-full h-full flex flex-col items-center justify-between py-24 pointer-events-none">
-          <h1 className="title">
+        <div className="w-full h-full flex flex-col items-center  py-24 pointer-events-none">
+          <h1 className="animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">
             The Sounds of Houston
           </h1>
 
