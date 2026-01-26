@@ -20,7 +20,7 @@ html, body, #root {
 /* ====== Neon Pulse Animation ====== */
 @keyframes neon-pulse {
   0% {
-    text-shadow: 0 0 5px #fe77c2, 0 0 10px #fe77c2, 0 0 20px #fe77c2, 0 0 40px #fe77c2;
+    text-shadow: 0 0 5px #5E93C9, 0 0 10px #5E93C9, 0 0 20px #5E93C9, 0 0 40px #5E93C9;
     opacity: 0.8;
   }
   50% {
