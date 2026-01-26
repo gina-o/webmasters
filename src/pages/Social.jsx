@@ -104,7 +104,7 @@ const filteredPosts = posts
 
 
           <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
-            <h1 className="text-4xl mb-4 text-white font-['Workbench']">
+            <h1 className="text-4xl mb-4 text-white font-rubik-80s">
               Communicate with Others
             </h1>
 
