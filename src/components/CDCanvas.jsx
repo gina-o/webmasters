@@ -37,7 +37,6 @@ export default function CDCanvas() {
           <h1 className="animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">
             The Sounds of Houston
           </h1>
-
           <p className="text-white/80 text-xl">
             Click the CD to enter Houston vibes
           </p>
