@@ -81,7 +81,7 @@ button {
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: #91b6db;
 }
 
 /* ====== LIGHT MODE FIX ====== */
