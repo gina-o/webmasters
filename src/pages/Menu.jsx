@@ -57,8 +57,13 @@ export default function Menu() {
 
                   <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Card 1 */}
+<<<<<<< HEAD
                     <div className="bg-white/10  backdrop-blur-md p-10 rounded-xl border border-white/20">
                       <h2 className="text-3xl font-rubik-80s mb-4">
+=======
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
+                      <h2 className="text-3xl font-bold mb-4">
+>>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc
                         Explore Neighborhoods
                       </h2>
                       <p>See the sound that fills the coves.</p>
@@ -70,6 +75,7 @@ export default function Menu() {
                       </button>
                     </div>
 
+<<<<<<< HEAD
           {/* Card 2 */}
           <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
             <h2 className="text-3xl font-rubik-80s mb-4">See what others are talking about</h2>
@@ -81,6 +87,21 @@ export default function Menu() {
   Go to Blog 
 </button>
           </div>
+=======
+                    {/* Card 2 */}
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
+                      <h2 className="text-3xl font-bold mb-4 text-center">
+                        See what others are talking about
+                      </h2>
+                      <p className="text-center" >Experience the sounds of Houston together</p>
+                      <button
+                        onClick={() => navigate("/social")}
+                        className="mt-4 bg-cyan-500 hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Go to Blog
+                      </button>
+                    </div>
+>>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc
 
                     {/* Card 3 */}
                     <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
@@ -98,8 +119,13 @@ export default function Menu() {
                     </div>
 
                     {/* Card 4 */}
+<<<<<<< HEAD
                     <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
                       <h2 className="text-3xl font-rubik-80s mb-4">
+=======
+                    <div className="bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 flex flex-col items-center">
+                      <h2 className="text-3xl font-bold mb-4">
+>>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc
                         Check out the venues
                       </h2>
                       <p>Explore the music which shapes Houston.</p>
