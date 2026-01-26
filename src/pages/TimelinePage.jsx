@@ -179,7 +179,7 @@ export default function TimelinePage() {
         {currentEvent.videoId && !playingVideo && (
           <button
             onClick={() => setPlayingVideo(true)}
-            className="mt-4 bg-pink-500 px-4 py-2 rounded-lg"
+            className="play-pause"
           >
             ▶ Play Sample
           </button>
