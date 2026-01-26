@@ -42,7 +42,7 @@ export default function CDCanvas() {
 
      
       <Html fullscreen>
-        <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center justify-between py-24 pointer-events-none">
+        <div className="w-full font-rubik-80s animate-neon-pulse h-full flex flex-col items-center py-24 pointer-events-none">
           <h1 className="title">
             The Sounds of Houston
           </h1>
