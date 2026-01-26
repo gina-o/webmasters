@@ -89,10 +89,6 @@ button:hover {
   html, body, #root {
     background: transparent !important;
   }
-
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 /* other */
