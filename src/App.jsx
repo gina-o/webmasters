@@ -12,7 +12,7 @@ import ConcertUpdates from "./pages/ConcertUpdates.jsx";
 import Resilience from "./pages/Resilience.jsx";
 import ResourceForm from './pages/ResourceForm.jsx';
 import Volunteer from './pages/Volunteer.jsx';
-
+import ReferencePage from './pages/ReferencePage.jsx';
 export default function App() {
   return (
     <div>
@@ -34,6 +34,7 @@ export default function App() {
         <Route path="/resilience" element={<Resilience />} />
         <Route path="/resource-form" element={<ResourceForm />} />
         <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/reference-page" element={<ReferencePage />} />
       </Routes>
     </div>
   );

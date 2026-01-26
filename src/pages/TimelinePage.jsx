@@ -50,7 +50,7 @@ const timelineEvents = [
       "The Geto Boys achieved national success with “Mind Playing Tricks,” which sold over a million copies and helped define Houston’s unique “gangsta rap” style. In 1993, H-Town’s “Knockin’ Da Boots” contributed greatly to Houston’s R&B culture. At the same time, Eightball & MJL released “Comin’ Out Hard” on Suave House. Houstonian drummer and composer Chris “Daddy” Dave became Mint Condition’s drummer on his debut. DJ Screw released numerous classics on Bigtyme Recordz, such as “3 ‘N The Mornin’” and “All Screwed Up Vol. 2” in 1995. Three years later, he opened the Screwed Up Records & Tapes on Cullen Boulevard. In the same year, 1998, Fat Pat’s classic “Ghetto Dreams” was released posthumously, just one month after his death.",
     image: "/Scarface.jpg",
     searchTerm: "The_Geto_Boys",
-    video: "https://www.youtube.com/watch?v=xjbRampe4qE",
+    video: "https://www.youtube.com/watch?v=ntR6aoL53rY&list=PLeA4iia333Q06sxq7gE90XjYG0dZIwl9j",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const timelineEvents = [
       "Beyoncé releases her first album, “Dangerously in Love,” which would later win a Grammy. Throughout the 2000s, she continued to amass US Billboard Hot 100 number-one singles, with her hits such as “Crazy in Love.” Mike Jones releases his debut single, “Still Tippin’,” featuring Slim Thug, Paul Wall, and Swisha House. “Purple World” by Big Moe reaches #3 on Billboard’s Top R&B/Hip-Hop Albums Charts. Big Moe’s last album, “Unfinished Business,” was released after his death in 2007, following heart-related issues.",
     searchTerm: "Beyoncé",
     video:
-      "https://www.youtube.com/watch?v=kklBRZHWfYg&list=RDkklBRZHWfYg&start_radio=1",
+      "https://www.youtube.com/watch?v=2aqA6EHVg0w",
   },
   {
     id: 6,
