@@ -121,7 +121,6 @@ button:hover {
 
 .content {
     background: rgb(61 114 166 / 50%);
-    width: 300vh;
     min-height: 100vh;
     width: 100vw;
 }
