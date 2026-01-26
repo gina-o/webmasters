@@ -156,7 +156,7 @@ body {
 
 @keyframes neon-pulse {
   0% {
-    text-shadow: 0 0 5px #d783b7, 0 0 10px #d783b7, 0 0 20px #d783b7, 0 0 40px #d783b7;
+    text-shadow: 0 0 5px #5E93C9, 0 0 10px #5E93C9, 0 0 20px #5E93C9, 0 0 40px #5E93C9;
     opacity: 0.8;
   }
   50% {
