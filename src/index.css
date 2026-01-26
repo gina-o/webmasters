@@ -266,8 +266,7 @@ button {
 
 .content {
     background: rgb(61 114 166 / 50%);
-    width: 300vh;
     min-height: 100vh;
-
+    width: 100vw;
 }
 >>>>>>> 2169a2a5109509bcc21343b407c9ce6c3d2084dc

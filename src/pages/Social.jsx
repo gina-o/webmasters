@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { auth, db, googleProvider } from "../firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { collection, collectionGroup, query, orderBy, onSnapshot } from "firebase/firestore";
@@ -6,11 +6,15 @@ import PostForm from "../components/PostForm";
 import PostList from "../components/PostList";
 
 const Social = () => {
+    const socialRef = useRef(null);
   const [user, setUser] = useState(null);
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
   const [authChecked, setAuthChecked] = useState(false);
   const [searchTerm, setSearchTerm] = useState(""); 
+    const scroll = () => {
+        socialRef.current?.scrollIntoView({ behavior: "smooth" });
+      };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
@@ -96,15 +100,28 @@ const filteredPosts = posts
 
   return (
     <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
-        <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
-                      <h1 className="font-sixtyfour animate-neon-pulse text-4xl mb-4 text-white font-['Workbench']">Communicate with Others</h1>
-                      <p className="text-lg leading-relaxed max-w-2xl mx-auto">
-                                  See what others are saying...
-                                </p>
-                    </div>
-                  </div>
-      <div className="max-w-screen w-full bg-white">
+        <section className="relative h-screen flex items-center justify-center">
+
+
+          <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+            <h1 className="text-4xl mb-4 text-white font-['Workbench']">
+              Communicate with Others
+            </h1>
+
+            <p className="text-lg max-w-2xl mx-auto">
+              See what others are saying...
+            </p>
+
+            <button
+              onClick={scroll}
+              className="mt-8 bg-purple-600 hover:bg-purple-800 text-white py-3 px-8 rounded-xl"
+            >
+              Chat!
+            </button>
+          </div>
+        </section>
+      <div className="content">
+          <section ref={socialRef} className="relative min-h-screen flex items-start justify-center pt-40">
       <div className="max-w-9/10 w-full mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-blue-400">
 
 
@@ -153,6 +170,7 @@ const filteredPosts = posts
           </div>
         )}
       </div>
+      </section>
     </div>
     </div>
   );
