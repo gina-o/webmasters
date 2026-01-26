@@ -47,7 +47,7 @@ export default function CDCanvas() {
             The Sounds of Houston
           </h1>
           <p className="text-white/80 text-xl">
-            Let's listen ▶︎
+            Click the CD to enter ▶︎
           </p>
         </div>
       </Html>
