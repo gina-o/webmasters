@@ -14,8 +14,8 @@ export default function Menu() {
   };
 
   return (
-    <div className="relative w-screen min-h-screen overflow-y-auto text-white">
-      {/* 🌊 Background */}
+    <div className="relative w-full text-white overflow-x-hidden">
+      {/* background */}
       <div className="fixed inset-0 bg-[url('/houmenu.png')] bg-cover" />
 
       {/* 🔮 Glass bubbles */}
