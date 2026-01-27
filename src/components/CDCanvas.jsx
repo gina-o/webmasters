@@ -20,7 +20,7 @@ function BackgroundMusic() {
 
 /* BACKGROUND: change images here */
 function Background() {
-  const texture = useTexture("/bruno.png");
+  const texture = useTexture("bruno.png");
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return <primitive attach="background" object={texture} />;
