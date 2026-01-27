@@ -49,7 +49,7 @@ export default function CDCanvas() {
           </div>
         </Html>
 
-        <SpinningCD modelPath="dist/chicken.glb" />
+        <SpinningCD modelPath={import.meta.env.BASE_URL + "chicken.glb"} />
         <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
       </Canvas>
 
