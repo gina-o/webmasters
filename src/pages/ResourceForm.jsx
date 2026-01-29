@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { db, collection, addDoc } from '../firebase'; // Import Firebase functions
 
 export default function ResourceForm() {
+    const resource = useRef(null);
+    const scroll = () => {
+                resource.current?.scrollIntoView({ behavior: "smooth" });
+              };
   const [resourceName, setResourceName] = useState('');
   const [resourceDescription, setResourceDescription] = useState('');
   const [resourceLink, setResourceLink] = useState('');
