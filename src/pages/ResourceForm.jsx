@@ -42,6 +42,27 @@ export default function ResourceForm() {
   };
 
   return (
+      <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                        <section className="relative h-screen flex items-center justify-center">
+
+
+                          <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                            <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                              Submit a Resource
+                            </h1>
+
+                            <p className="text-lg max-w-2xl mx-auto">
+                              Help your community!
+                            </p>
+
+                            <button
+                              onClick={scroll}
+                              className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                            >
+                              Fill out form
+                            </button>
+                          </div>
+                        </section>
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold mb-4 text-center">Submit a New Resource</h2>
 
