@@ -90,7 +90,7 @@ export default function ConcertUpdates() {
       </div>
 
       {/* Grid layout for concerts */}
-      <div className="grid grid-cols-3 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid place-items-center grid-cols-3 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {filteredConcerts.map((concert) => {
           const venue = concert._embedded?.venues?.[0];
           const imageUrl = concert.images?.[0]?.url;
