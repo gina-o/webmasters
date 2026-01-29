@@ -86,6 +86,7 @@ const timelineEvents = [
 
 
 export default function TimelinePage() {
+    const timeRef = useRef(null);
   const [activeEvent, setActiveEvent] = useState(timelineEvents[0].id);
   const [eventsWithImages, setEventsWithImages] = useState(timelineEvents);
   const [playingVideo, setPlayingVideo] = useState(false);
