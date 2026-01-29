@@ -131,6 +131,8 @@ export default function ResourceForm() {
           </button>
         </div>
       </form>
+    </section>
+    </div>
     </div>
   );
 }
