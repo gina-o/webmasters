@@ -164,7 +164,7 @@ const HoustonMap = () => {
 
           {/* Play/Stop Buttons */}
           {selectedNeighborhood.video && !playingVideo && (
-            <button onClick={handlePlay} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+            <button onClick={handlePlay} className="mt-4 px-4 py-2 bg-red-500 text-white rounded">
               ▶ Play Sample
             </button>
           )}
