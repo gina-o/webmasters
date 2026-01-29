@@ -51,6 +51,25 @@ export default function ConcertUpdates() {
                   <section className="relative h-screen flex items-center justify-center">
 
 
+                    <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                      <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                        Concerts Near You
+                      </h1>
+
+                      <p className="text-lg max-w-2xl mx-auto">
+                        Find other ways to embrace the music
+                      </p>
+
+                      <button
+                        onClick={scroll}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        See Concerts
+                      </button>
+                    </div>
+                  </section>
+<div className="content">
+          <section ref={concertRef} className="max-w-6xl mx-auto p-4">
       {/* Date filter input */}
       <div className="mb-4 text-center">
         <label className="mr-2 font-medium">Filter by Date:</label>
