@@ -105,7 +105,6 @@ const HoustonMap = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center my-4">Houston Music Map</h1>
 
       <MapContainer
         center={[29.7604, -95.3698]}
