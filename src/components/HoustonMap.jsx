@@ -191,7 +191,7 @@ const HoustonMap = () => {
         </div>
       )}
 
-      <footer className="text-center mt-6 text-sm">
+      <footer className="text-center text-white mt-6 text-sm">
         <p>Sources:</p>
         <ul className="list-disc list-inside">
           <li><a href="https://www.txst.edu/ctmh/publications/journal/issues/jtmh-vol-21/vol-21-houston-roots.html">Source 1</a></li>
