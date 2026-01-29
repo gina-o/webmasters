@@ -3,6 +3,10 @@ import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
 function VolunteerHub() {
+    const v = useRef(null);
+    const scroll = () => {
+        v.current?.scrollIntoView({ behavior: "smooth" });
+    };
   const [nonprofits, setNonprofits] = useState([]);
 
   useEffect(() => {
