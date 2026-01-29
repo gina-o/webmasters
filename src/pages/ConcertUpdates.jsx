@@ -47,8 +47,9 @@ export default function ConcertUpdates() {
   });
 
   return (
-    <div className="min-h-screen bg-blue-500 bg-opacity-30 p-6 backdrop-blur-lg rounded-lg shadow-lg">
-      <h1 className="text-5xl font-rubik-80s animate-neon-pulse-yellow mb-6 text-center">Concerts Near You</h1>
+    <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                  <section className="relative h-screen flex items-center justify-center">
+
 
       {/* Date filter input */}
       <div className="mb-4 text-center">
