@@ -34,6 +34,7 @@ const MapPage = () => {
       <div className="content">
           <section ref={mapRef} className="max-w-6xl mx-auto p-4">
         <HoustonMap />
+        </section>
       </div>
     </div>
   );
