@@ -140,8 +140,8 @@ export default function TimelinePage() {
             }}
             className={`px-4 py-2 rounded-lg ${
               event.id === activeEvent
-                ? "bg-purple-600"
-                : "bg-white/20 hover:bg-purple-700"
+                ? "bg-cyan-700"
+                : "bg-white/20 hover:bg-[#92BCCF]"
             }`}
           >
             {event.year}
