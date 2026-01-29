@@ -219,6 +219,8 @@ export default function TimelinePage() {
       <div className="mt-6 text-xs text-gray-400 text-center">
         Sources: Houstonia, Houston Music Live, Camden Living, TSHA, Grammy
       </div>
+      </section>
+      </div>
     </div>
   );
 }
