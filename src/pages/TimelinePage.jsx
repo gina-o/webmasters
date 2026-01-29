@@ -93,6 +93,10 @@ export default function TimelinePage() {
 
   const currentEvent = eventsWithImages.find((e) => e.id === activeEvent);
 
+  const scroll = () => {
+      timeRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
   // Fetch image from Wikimedia (with fallback)
   const fetchWikiImage = async (title) => {
     try {
