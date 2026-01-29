@@ -130,6 +130,8 @@ export default function ConcertUpdates() {
           );
         })}
       </div>
+      </section>
+      </div>
     </div>
   );
 }
