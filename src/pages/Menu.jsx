@@ -40,6 +40,9 @@ export default function Menu() {
             <p className="text-lg leading-relaxed max-w-2xl mx-auto">
               This is a living, musical map of our city. Where history, culture, and community come together through sound.
             </p>
+            <p className="text-lg leading-relaxed max-w-2xl mx-auto">
+                          If you ever feel lost, you have the music to guide you. Simply click the music icon to return back to this page.
+                        </p>
             <button
               onClick={scrollToExplore}
               className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg shadow-md"
