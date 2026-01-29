@@ -114,7 +114,7 @@ const filteredPosts = posts
 
             <button
               onClick={scroll}
-              className="mt-8 bg-purple-600 hover:bg-purple-800 text-white py-3 px-8 rounded-xl"
+              className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
             >
               Chat!
             </button>
