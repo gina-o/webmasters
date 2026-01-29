@@ -63,7 +63,8 @@ export default function ResourceForm() {
                             </button>
                           </div>
                         </section>
-    <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+                        <div class="content">
+    <section ref={resource} className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold mb-4 text-center">Submit a New Resource</h2>
 
       {submitted && <p className="text-center text-green-500">Resource submitted successfully!</p>}
