@@ -149,6 +149,7 @@ export default function TimelinePage() {
     <section ref={timeRef} className="flex flex-col items-center justify-center m-15">
       {/* Timeline */}
       <div className="flex space-x-4 overflow-x-auto mb-8">
+
         {eventsWithImages.map((event) => (
           <button
             key={event.id}
