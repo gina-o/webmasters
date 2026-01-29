@@ -124,10 +124,14 @@ export default function TimelinePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center p-6">
-      <h1 className="text-5xl font-rubik-80s animate-neon-pulse mb-8 text-center font-['Workbench']">
-        Houston Music Through Time
-      </h1>
+    <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                  <section className="relative h-screen flex items-center justify-center">
+
+
+                    <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                      <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                        Houston Music Through Time
+                      </h1>
 
       {/* Timeline */}
       <div className="flex space-x-4 overflow-x-auto mb-8">
