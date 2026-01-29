@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { db, collection, addDoc } from '../firebase'; // Import Firebase functions
 
 export default function ResourceForm() {
