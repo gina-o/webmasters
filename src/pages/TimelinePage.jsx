@@ -133,6 +133,20 @@ export default function TimelinePage() {
                         Houston Music Through Time
                       </h1>
 
+                      <p className="text-lg max-w-2xl mx-auto">
+                        See how Houston created the music it has today
+                      </p>
+
+                      <button
+                        onClick={scroll}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Dive in!
+                      </button>
+                    </div>
+                  </section>
+<div class="content">
+    <section ref={timeRef} className="flex flex-col items-center justify-center m-15">
       {/* Timeline */}
       <div className="flex space-x-4 overflow-x-auto mb-8">
         {eventsWithImages.map((event) => (
