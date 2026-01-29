@@ -121,6 +121,7 @@ function VolunteerHub() {
             </div>
           ))}
         </div>
+      </section>
       </div>
     </div>
   );
