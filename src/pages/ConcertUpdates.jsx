@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 export default function ConcertUpdates() {
+    const concertRef = useRef(null);
+    const scroll = () => {
+            concertRef.current?.scrollIntoView({ behavior: "smooth" });
+          };
   const [concerts, setConcerts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterDate, setFilterDate] = useState("");
