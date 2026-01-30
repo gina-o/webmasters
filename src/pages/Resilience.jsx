@@ -26,46 +26,113 @@ function BlogSection({ title, year, text, image, reverse }) {
 }
 
 const disasters = [
-  {
-    id: "harvey",
-    title: "Hurricane Harvey",
-    year: 2017,
-    description:
-      "When Harvey hit Houston, the Houston Symphony played at shelters across Houston and gave over 20 performances over 9 days, despite members being personally affected by the disaster. The orchestra also played a Mozart string quartet for a blind evacuee who had been unable to calm down for days, providing comfort through the power of music. Local artists and organizations also stepped up. Nameless Sound organized benefit concerts and music therapy sessions for affected communities, while Music Doing Good provided instruments and music lessons to children in shelters, helping them find joy amid the chaos. After Harvey, Music Doing Good partnered with individuals, organizations, and retail vendors to collect instruments. They then refurbished and redistributed them to low-income families who lost instruments in the flooding and could not afford to buy new ones.",
-    sources: [
-      {
-        label: "National Weather Service",
-        url: "https://www.weather.gov/hgx/hurricaneharvey",
-      },
-      {
-        label: "Houston Symphony",
-        url: "https://houstonsymphony.org/32604-2/",
-      },
-      {
-        label: "PaperCity – Nameless Sound",
-        url: "https://www.papercitymag.com/arts/houston-artists-recover-hurricane-harvey-band-together",
-      },
-      {
-        label: "Chron – Music Doing Good",
-        url: "https://www.chron.com/neighborhood/bellaire/news/article/Music-Doing-Good-nonprofit-brings-music-to-12249611.php",
-      },
-    ],
-    images: [
-      {
-        src: "symphony.jpg",
-        alt: "Houston Symphony during Harvey",
-      },
-      {
-        src: "nameless.jpg",
-        alt: "Nameless Sound's concert for Harvey victims",
-      },
-      {
-        src: "music.jpg",
-        alt: "Music Doing Good's instrument distribution",
-      },
-    ],
-  },
-  // Continue the rest of the disaster objects here
+{
+  id: "central-texas-floods",
+  title: "Central Texas Floods",
+  year: 2025,
+  description:
+    "After the devastating Central Texas floods in 2025, artists and community leaders came together to support those affected through music. A benefit concert titled 'Banding Together for Texas: A Night of Healing, Hope, and Music' featured performers and guests such as Kelly Clarkson, Jon Randall, Lukas Nelson, Lyle Lovett, Mack Brown, Emmanuel Acho, and Matthew McConaughey. The event raised over $8.5 million to help impacted communities, showing how music can unite people, provide emotional healing, and inspire collective recovery after tragedy.",
+  sources: [
+    {
+      label: "JK Livin Foundation – Banding Together for Texas",
+      url: "https://jklivinfoundation.org/events-post/banding-together-for-texas-a-night-of-healing-hope-and-music/",
+    },
+  ],
+  images: [
+    {
+      src: "concert-healing.jpg",
+      alt: "Artists performing at Banding Together for Texas",
+    },
+    {
+      src: "community-support.jpg",
+      alt: "Community gathering for flood recovery",
+    },
+  ],
+},
+
+{
+  id: "hurricane-ike",
+  title: "Hurricane Ike",
+  year: 2008,
+  description:
+    "When Hurricane Ike struck Texas in 2008, widespread destruction left many families displaced and in need of support. In response, local Houston-area bands organized benefit concerts to raise money and collect donations for shelters hosting hurricane evacuees. These performances offered not only financial assistance but also a sense of solidarity and hope, reminding affected communities that they were not alone during recovery.",
+  sources: [
+    {
+      label: "National Weather Service – Hurricane Ike",
+      url: "https://www.weather.gov/lch/ikemain",
+    },
+    {
+      label: "Houston Chronicle – Ike Relief Concerts",
+      url: "https://www.chron.com/neighborhood/humble-news/article/ike-relief-benefit-concert-set-1638900.php",
+    },
+  ],
+  images: [
+    {
+      src: "ike-damage.jpg",
+      alt: "Damage caused by Hurricane Ike",
+    },
+    {
+      src: "ike-benefit.jpg",
+      alt: "Local bands hosting Hurricane Ike benefit concert",
+    },
+  ],
+},
+
+{
+  id: "hurricane-katrina",
+  title: "Hurricane Katrina",
+  year: 2005,
+  description:
+    "After Hurricane Katrina forced thousands of New Orleans residents to evacuate to Houston, music became a powerful source of comfort for displaced communities. New Orleans brass band musicians who relocated to Houston held spontaneous performances at shelters such as the Astrodome. Their music brought joy, familiarity, and emotional relief to fellow evacuees, helping people cope with loss and uncertainty during one of the most devastating disasters in U.S. history.",
+  sources: [
+    {
+      label: "Houston Chronicle – Katrina Brass Bands",
+      url: "https://www.chron.com/culture/article/houston-brass-band-musicians-katrina-20806968.php",
+    },
+  ],
+  images: [
+    {
+      src: "katrina-astrodome.jpg",
+      alt: "Evacuees at the Astrodome after Hurricane Katrina",
+    },
+    {
+      src: "brass-band.jpg",
+      alt: "New Orleans brass band musicians performing in Houston",
+    },
+    {
+      src: "katrina-music.jpg",
+      alt: "Music bringing hope to Katrina evacuees",
+    },
+  ],
+},
+
+{
+  id: "challenger",
+  title: "The Challenger Disaster",
+  year: 1986,
+  description:
+    "Following the Space Shuttle Challenger disaster, which deeply affected Houston and the NASA community, musician Jean-Michel Jarre organized a large-scale live concert titled 'Rendez-vous Houston.' Held two months after the tragedy, the concert honored the astronauts who lost their lives and celebrated the city’s resilience. An estimated 1.5 million people attended, making it one of the largest concerts ever, and demonstrating how music can serve as a powerful tribute and a means of collective healing after loss.",
+  sources: [
+    {
+      label: "Wikipedia – Rendez-vous Houston",
+      url: "https://en.wikipedia.org/wiki/Rendez-vous_Houston",
+    },
+  ],
+  images: [
+    {
+      src: "challenger-memorial.jpg",
+      alt: "Memorial for Challenger astronauts",
+    },
+    {
+      src: "jarre-concert.jpg",
+      alt: "Jean-Michel Jarre performing in Houston",
+    },
+    {
+      src: "houston-crowd.jpg",
+      alt: "Crowd at Rendez-vous Houston concert",
+    },
+  ],
+},
 ];
 
 

@@ -20,7 +20,7 @@ const timelineEvents = [
     image: "/SugarHill.jpg",
     description:
       "The 1940s marked the beginning of Houston’s music era. After experimenting with recording technology, William Russel “Bill” Quinn founded Quinn Recording, which later became SugarHill Recording Studio, the oldest operating studio in the nation. Many other recording studios were created, such as Peacock Records and Freedom Records. Goree Carter, a singer, guitarist, drummer, and songwriter, released “Rock Awhile,” one of the first rock n’ roll recordings in the U.S. Blues were very popular during this period. Samuel John Hopkins, now known as Lightnin’ Hopkins, was discovered while singing in Houston’s Third Ward. In 1946, he traveled with Wilson Smith to Los Angeles, where they recorded 12 tracks.",
-    video: "https://www.youtube.com/watch?v=hrfPbLxxZRw",
+    video: "https://www.youtube.com/watch?v=61dl_zCyqH8&list=PL9Awn3xplT3v2ACCs3NrRKjYNui3xy3Jl",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const timelineEvents = [
       "In the 1950s, Louisiana native Clifton Chenier, a migrant to Bayou City in the 40s released his first album titled “Louisiana Blues & Zydeco.” As the inventor of the zydeco, Chenier actually first introduced his genre in Houston’s Fifth Ward. One of Elvis Presley’s most famous covers, “Hound Dog,” was recorded by Big Mama Thornton in 1954, marking a new kind of music that would help define the 20th-century era. William Russell Quinn, the founder of Gold Star Records, moved his studio to his family home at 5628 Brock Street. The facility expanded throughout the 50s, becoming the primary facility for D Records labels.",
     searchTerm: "Clifton_Chenier",
     video:
-      "https://www.youtube.com/watch?v=R-W9f38qdVs&list=RDR-W9f38qdVs&start_radio=1",
+      "https://www.youtube.com/watch?v=8dGM2EpLKVk",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const timelineEvents = [
       "The 1960s brought forth Lightnin’ Hopkins, a Houstonian icon and the city’s king of blues’s album “The Great Electric Show and Dance.” Gold Star Studio recorded for country artists such as George Jones, Hank Locklin, Willie Nelson, and Floyd Tillman. It was later sold to International Artists in 1968 after being leased by J.L. Patterson. In 1967, the TSU Tornadoes worked with Archie Bell & The Drells to create music for their hit single “Tighten Up,” which would be released the next year. Joe Sample and Wilton Felder, members of the jazz band The Jazz Crusaders, play on The Jackson 5’s first national hit, “I Want You Back.”",
     image: "/light.jpg",
     video:
-      "https://www.youtube.com/watch?v=lK5zYI86wIw&list=RDlK5zYI86wIw&start_radio=1",
+      "https://www.youtube.com/watch?v=Cosw9guEcUg",
   },
   {
     id: 4,
@@ -70,7 +70,7 @@ const timelineEvents = [
       "Robert Glasper won his first Grammy for “Best R&R Album” for Black Radio in 2012. He later went on to score films along with many other prominent musicians at the time. In 2016, Beyoncé’s sister, Solange Knowles, won a Grammy for “Cranes in the Sky.” At the same time, her sister went on her highest-grossing tour to promote her album, Lemonade. Astroworld, Travis Scott’s third studio album, was released in 2018; he additionally produced his first #1 single, “Sicko Mode” with Drake.",
     image: "/travis.jpg",
     video:
-      "https://www.youtube.com/watch?v=5p2lmpPlT2M&list=RD5p2lmpPlT2M&start_radio=1",
+      "https://www.youtube.com/watch?v=3FxTKpoFmYw",
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ const timelineEvents = [
       "In 2021, Megan Thee Stallion won three Grammys, with Beyoncé becoming the most-awarded and most-nominated artist as of 2025, having a total of 35 wins and 99 nominations. Houston remains a center for tourists and residents alike to indulge in its rich and diverse selection of music across the metropolis. The city’s Houston Symphony holds over 100 concerts annually in Jones Hall. Shows and performances are held in the NRG Stadium as well as the Toyota Center, varying from the Houston Ballet all the way to Taylor Swift’s Eras Tour performance.",
     image: "/Megan.jpg",
     video:
-      "https://www.youtube.com/watch?v=MEV_oYtSc18&list=PL1z9R7TJXY8yD_zFr4ez-rlGGgfalAfvy&index=18",
+      "https://youtu.be/QZLxzDwAZWw?si=D-G9zAKHkVOF27z_",
   },
 ];
 

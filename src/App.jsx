@@ -13,16 +13,16 @@ import Resilience from "./pages/Resilience.jsx";
 import ResourceForm from './pages/ResourceForm.jsx';
 import Volunteer from './pages/Volunteer.jsx';
 import ReferencePage from './pages/ReferencePage.jsx';
+
 export default function App() {
   return (
     <div>
-<Link 
-  to="/menu" 
-  className="fixed bottom-10 right-10 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition z-50"
->
-  <FaMusic size={30} />
-</Link>
-
+      <Link 
+        to="/menu" 
+        className="fixed bottom-10 right-10 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition z-50"
+      >
+        <FaMusic size={30} />
+      </Link>
 
       <Routes>
         <Route path="/" element={<Home />} />

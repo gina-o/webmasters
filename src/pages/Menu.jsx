@@ -149,6 +149,7 @@ export default function Menu() {
 
       {/* Background music */}
       <audio id="background-audio" autoPlay loop>
+        
         <source src="ambient.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
