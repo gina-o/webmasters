@@ -88,7 +88,8 @@ function ReferencePage() {
       {/* Add all other references similarly */}
       </div>
       <div style={{ flex: 1 }}>
-        <iframe src="/Work Log.pdf" width="100%" height="600px" ><p>Your browser does not support this element.</p></iframe>
+
+         <img src="/webmaster_copyright.jpg" />
       </div>
     </div>
   );
