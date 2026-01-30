@@ -92,6 +92,8 @@ function ReferencePage() {
          <img src="/webmaster_copyright.jpg" />
       </div>
     </div>
+    <iframe src="/Work Log.pdf" width="80%" height="600px" style={{ margin: '40px auto'}} ><p>Your browser does not support this element.</p></iframe>
+    </div>
   );
 }
 
