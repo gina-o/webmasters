@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Helper: extract YouTube video ID from full URL
@@ -86,11 +86,16 @@ const timelineEvents = [
 
 
 export default function TimelinePage() {
+    const timeRef = useRef(null);
   const [activeEvent, setActiveEvent] = useState(timelineEvents[0].id);
   const [eventsWithImages, setEventsWithImages] = useState(timelineEvents);
   const [playingVideo, setPlayingVideo] = useState(false);
 
   const currentEvent = eventsWithImages.find((e) => e.id === activeEvent);
+
+  const scroll = () => {
+      timeRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
 
   // Fetch image from Wikimedia (with fallback)
   const fetchWikiImage = async (title) => {
@@ -124,13 +129,32 @@ export default function TimelinePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center p-6">
-      <h1 className="text-5xl font-rubik-80s animate-neon-pulse mb-8 text-center font-['Workbench']">
-        Houston Music Through Time
-      </h1>
+    <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                  <section className="relative h-screen flex items-center justify-center">
 
+
+                    <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                      <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                        Houston Music Through Time
+                      </h1>
+
+                      <p className="text-lg max-w-2xl mx-auto">
+                        See how Houston created the music it has today
+                      </p>
+
+                      <button
+                        onClick={scroll}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        Dive in!
+                      </button>
+                    </div>
+                  </section>
+<div class="content">
+    <section ref={timeRef} className="flex flex-col items-center justify-center m-15">
       {/* Timeline */}
       <div className="flex space-x-4 overflow-x-auto mb-8">
+
         {eventsWithImages.map((event) => (
           <button
             key={event.id}
@@ -140,8 +164,8 @@ export default function TimelinePage() {
             }}
             className={`px-4 py-2 rounded-lg ${
               event.id === activeEvent
-                ? "bg-purple-600"
-                : "bg-white/20 hover:bg-purple-700"
+                ? "bg-cyan-700"
+                : "bg-white/20 hover:bg-[#92BCCF]"
             }`}
           >
             {event.year}
@@ -179,7 +203,7 @@ export default function TimelinePage() {
         {currentEvent.videoId && !playingVideo && (
           <button
             onClick={() => setPlayingVideo(true)}
-            className="play-pause"
+            className="bg-red-500"
           >
             ▶ Play Sample
           </button>
@@ -199,6 +223,8 @@ export default function TimelinePage() {
       {/* Sources stay untouched */}
       <div className="mt-6 text-xs text-gray-400 text-center">
         Sources: Houstonia, Houston Music Live, Camden Living, TSHA, Grammy
+      </div>
+      </section>
       </div>
     </div>
   );

@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function ConcertUpdates() {
+    const concertRef = useRef(null);
+    const scroll = () => {
+            concertRef.current?.scrollIntoView({ behavior: "smooth" });
+          };
   const [concerts, setConcerts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterDate, setFilterDate] = useState("");
@@ -43,9 +47,29 @@ export default function ConcertUpdates() {
   });
 
   return (
-    <div className="min-h-screen bg-blue-500 bg-opacity-30 p-6 backdrop-blur-lg rounded-lg shadow-lg">
-      <h1 className="text-5xl font-rubik-80s animate-neon-pulse-yellow mb-6 text-center">Concerts Near You</h1>
+    <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                  <section className="relative h-screen flex items-center justify-center">
 
+
+                    <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                      <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                        Concerts Near You
+                      </h1>
+
+                      <p className="text-lg max-w-2xl mx-auto">
+                        Find other ways to embrace the music
+                      </p>
+
+                      <button
+                        onClick={scroll}
+                        className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                      >
+                        See Concerts
+                      </button>
+                    </div>
+                  </section>
+<div className="content">
+          <section ref={concertRef} className="max-w-6xl mx-auto p-4">
       {/* Date filter input */}
       <div className="mb-4 text-center">
         <label className="mr-2 font-medium">Filter by Date:</label>
@@ -66,7 +90,7 @@ export default function ConcertUpdates() {
       </div>
 
       {/* Grid layout for concerts */}
-      <div className="grid grid-cols-3 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid place-items-center grid-cols-3 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {filteredConcerts.map((concert) => {
           const venue = concert._embedded?.venues?.[0];
           const imageUrl = concert.images?.[0]?.url;
@@ -105,6 +129,8 @@ export default function ConcertUpdates() {
             </div>
           );
         })}
+      </div>
+      </section>
       </div>
     </div>
   );

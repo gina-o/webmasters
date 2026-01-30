@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { db, collection, addDoc } from '../firebase'; // Import Firebase functions
 
 export default function ResourceForm() {
+    const resource = useRef(null);
+    const scroll = () => {
+                resource.current?.scrollIntoView({ behavior: "smooth" });
+              };
   const [resourceName, setResourceName] = useState('');
   const [resourceDescription, setResourceDescription] = useState('');
   const [resourceLink, setResourceLink] = useState('');
@@ -38,7 +42,29 @@ export default function ResourceForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+                        <section className="relative h-screen flex items-center justify-center">
+
+
+                          <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                            <h1 className="text-4xl mb-4 text-white font-rubik-80s">
+                              Submit a Resource
+                            </h1>
+
+                            <p className="text-lg max-w-2xl mx-auto">
+                              Help your community!
+                            </p>
+
+                            <button
+                              onClick={scroll}
+                              className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
+                            >
+                              Fill out form
+                            </button>
+                          </div>
+                        </section>
+                        <div class="content">
+    <section ref={resource} className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold mb-4 text-center">Submit a New Resource</h2>
 
       {submitted && <p className="text-center text-green-500">Resource submitted successfully!</p>}
@@ -105,6 +131,8 @@ export default function ResourceForm() {
           </button>
         </div>
       </form>
+    </section>
+    </div>
     </div>
   );
 }

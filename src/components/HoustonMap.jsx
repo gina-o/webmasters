@@ -105,7 +105,6 @@ const HoustonMap = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center my-4">Houston Music Map</h1>
 
       <MapContainer
         center={[29.7604, -95.3698]}
@@ -164,7 +163,7 @@ const HoustonMap = () => {
 
           {/* Play/Stop Buttons */}
           {selectedNeighborhood.video && !playingVideo && (
-            <button onClick={handlePlay} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+            <button onClick={handlePlay} className="mt-4 px-4 py-2 bg-red-500 text-white rounded">
               ▶ Play Sample
             </button>
           )}
@@ -191,7 +190,7 @@ const HoustonMap = () => {
         </div>
       )}
 
-      <footer className="text-center mt-6 text-sm">
+      <footer className="text-center text-white mt-6 text-sm">
         <p>Sources:</p>
         <ul className="list-disc list-inside">
           <li><a href="https://www.txst.edu/ctmh/publications/journal/issues/jtmh-vol-21/vol-21-houston-roots.html">Source 1</a></li>

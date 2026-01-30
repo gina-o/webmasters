@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 
 function VolunteerHub() {
+    const v = useRef(null);
+    const scroll = () => {
+        v.current?.scrollIntoView({ behavior: "smooth" });
+    };
   const [nonprofits, setNonprofits] = useState([]);
 
   useEffect(() => {
@@ -91,9 +95,16 @@ function VolunteerHub() {
   ];
 
   return (
-    <div className="flex flex-col items-center py-10 px-4 bg-gradient-to-r from-blue-100 to-blue-200 min-h-screen">
-      <div className="max-w-screen-xl w-full bg-white bg-opacity-60 backdrop-blur-lg p-8 rounded-xl shadow-lg">
-        <h1 className="text-5xl font-rubik-80s animate-lilac text-center text-gray-800 mb-12">Volunteer Opportunities in Houston</h1>
+    <div className="min-h-screen bg-[url('/houmenu.png')] py-10 bg-cover">
+        <section className="relative h-screen flex items-center justify-center">
+            <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
+                <h1 className="text-4xl mb-4 text-white font-rubik-80s">Concerts Near You</h1>
+                <p className="text-lg max-w-2xl mx-auto">Find other ways to embrace the music</p>
+                <button onClick={scroll} className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg">See Concerts</button>
+            </div>
+        </section>
+    <div className="content flex justify-center px-4">
+      <section ref={v} className="max-w-screen-xl w-full bg-white bg-opacity-60 backdrop-blur-lg p-8 rounded-xl shadow-lg object-center">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {nonprofits.concat(additionalNonprofits).map((nonprofit, index) => (
             <div key={index} className="bg-white bg-opacity-70 backdrop-blur-md rounded-lg p-6 shadow-xl hover:shadow-2xl transform transition-all hover:scale-105">
@@ -114,6 +125,7 @@ function VolunteerHub() {
             </div>
           ))}
         </div>
+      </section>
       </div>
     </div>
   );

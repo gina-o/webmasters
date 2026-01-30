@@ -104,7 +104,7 @@ const filteredPosts = posts
 
 
           <div className="relative z-10 max-w-5xl w-full bg-white/10 backdrop-blur-md p-12 rounded-2xl shadow-xl border border-white/20 text-center">
-            <h1 className="text-4xl mb-4 text-white font-['Workbench']">
+            <h1 className="text-4xl mb-4 text-white font-rubik-80s">
               Communicate with Others
             </h1>
 
@@ -114,7 +114,7 @@ const filteredPosts = posts
 
             <button
               onClick={scroll}
-              className="mt-8 bg-purple-600 hover:bg-purple-800 text-white py-3 px-8 rounded-xl"
+              className="mt-4 bg-[#92BCCF] hover:bg-cyan-700 py-2 px-4 rounded-lg"
             >
               Chat!
             </button>
@@ -122,7 +122,7 @@ const filteredPosts = posts
         </section>
       <div className="content">
           <section ref={socialRef} className="relative min-h-screen flex items-start justify-center pt-40">
-      <div className="max-w-9/10 w-full mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-blue-400">
+      <div className="w-[90%] mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-blue-400">
 
 
         {user ? (

@@ -2,8 +2,17 @@ import React from 'react';
 
 function ReferencePage() {
   return (
-    <div className="container" style={{ width: '80%', margin: '50px auto', fontFamily: 'Roboto, sans-serif' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>References</h1>
+      <div>
+    <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>References</h1>
+    <div className="container" style={{
+                                   width: '80%',
+                                   margin: '50px auto',
+                                   fontFamily: 'Roboto, sans-serif',
+                                   display: 'flex',
+                                   justifyContent: 'space-around'
+                                 }}>
+      <div style={{ flex: 2 }}>
+
       <div className="reference" style={{ marginBottom: '20px', lineHeight: '1.6' }}>
         <p>
           "Houston Roots: The Legacy of African American Music in Houston." <em>The Journal of Texas Music History</em>, vol. 21, Texas State University, 2021,{' '}
@@ -77,6 +86,13 @@ function ReferencePage() {
         </p>
       </div>
       {/* Add all other references similarly */}
+      </div>
+      <div style={{ flex: 1 }}>
+
+         <img src="/webmaster_copyright.jpg" />
+      </div>
+    </div>
+    <iframe src="/Work Log.pdf" width="80%" height="600px" style={{ margin: '40px auto'}} ><p>Your browser does not support this element.</p></iframe>
     </div>
   );
 }
