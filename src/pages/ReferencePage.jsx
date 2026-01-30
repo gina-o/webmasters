@@ -11,7 +11,7 @@ function ReferencePage() {
                                    display: 'flex',
                                    justifyContent: 'space-around'
                                  }}>
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 2 }}>
 
       <div className="reference" style={{ marginBottom: '20px', lineHeight: '1.6' }}>
         <p>
